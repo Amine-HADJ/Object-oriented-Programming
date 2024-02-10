@@ -1,0 +1,107 @@
+package tp.model.agents;
+
+import java.awt.Point;
+import tp.model.comportements.Deplacable;
+
+public abstract class Agent{
+
+	private static int currentId = 0;
+	/** identifiant unique/
+	private int id;
+	/** age en unité de temps*/
+	protected int age;
+	/** position sur la carte*/
+	protected Point coord;
+	
+	
+	protected Boolean faim;
+	
+	
+
+	public Agent() {
+		super();
+		id = getUniqueId();
+		this.setAge(0);
+		faim = false;
+		this.setCoord(0,0);
+		
+	}
+	
+	public Agent(Point coord) {
+		super();
+		this.id = getUniqueId();
+		this.setAge(0);
+		this.faim = false;
+		this.setCoord(coord.x, coord.y);
+		
+	}
+
+	public int getAge() {
+		return this.age;
+	}
+	
+
+	public int getId() {
+		return this.id;
+	}
+
+	
+
+	public void setAge(int age) {
+		if (age > this.age) {
+			this.age = age;
+		}
+	}
+
+	public Point getCoord() {
+		return new Point(this.coord);
+	}
+	
+	public void setCoord(int x, int y) {
+		this.coord = new Point(x,y);
+		
+	}
+
+	public Etat getEtat() {
+		return this.etat;
+	}
+
+	public void vieillir() {
+		//TODO fait vieillir l'animal d'une unité de temps
+		//une bonne manière de faire, une moins bonne...
+		++this.age;
+	}
+	
+	protected static int getUniqueId() {
+		//TODO 
+		
+		return ++currentId;
+	}
+	
+	public boolean aFaim() {
+		return this.faim;
+	}
+	
+	
+
+	
+	
+	public final void cycle() {
+		this.vieillir();
+		if(this instanceof Deplacable) {
+			((Deplacable)this).seDeplacer();
+		}
+		this.seNourrir(); 
+	}
+	
+	
+	
+	protected abstract void seNourrir();
+	public abstract void rencontrer(Agent a);
+	
+	protected abstract void maj();
+	
+	
+	
+
+}

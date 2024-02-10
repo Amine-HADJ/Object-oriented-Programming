@@ -1,0 +1,115 @@
+package tp.model.agents;
+
+import java.awt.Point;
+import java.util.Objects;
+import tp.model.comportements.Hebergeur;
+import tp.model.comportements.Deplacable;
+
+
+
+/**
+ * Cette classe modélise un Animal dans la simulation
+ * @author bruno
+ * 
+ */
+public abstract class Animal extends Agent implements Deplacable{
+	
+	public Hebergeur lieuHebergement;
+	
+	
+	
+	
+	
+	/* 
+	 * constructeurs 
+	 */
+	
+	public Animal(Sexe sexe, Point coord) {
+		super();
+		this.sexe=sexe;
+	}
+	
+	public Animal(Sexe sexe) {
+		super();
+		//TODO
+		/* crée un animal avec le sexe passé en paramètre, à la position (0;0), d'âge 0 et lui attribue un id unique
+		 * une bonne manière de faire 
+		 * en utilisant ce qui existe déjà, une moins bonne
+		 */
+		this.sexe=sexe;
+	}
+	
+	public Animal() {
+		super();
+		//TODO
+		/* crée un animal de sexe femelle, à la position (0;0), d'âge 0 et lui attribue un id unique
+		 * une bonne manière de faire 
+		 * en utilisant ce qui existe déjà, une moins bonne
+		 */
+		this.sexe=Sexe.Femelle;
+		;
+	}
+	
+	
+	
+	/*
+	 *  Accesseurs et mutateurs
+	 */
+	//TODO
+	
+	/*
+	 * Redéfinitions de méthodes d'object
+	 */
+	//TODO
+	public String toString() {
+		String className = this.getClass().getSimpleName();
+		int id = this.getId();
+		Sexe sexe = this.sexe;
+		Point coord = this.coord;
+		
+		return String.format("%s, %d,(%s (%d;%d)) ", className, id, sexe, coord.x, coord.y);
+	}
+	
+	
+
+	/* 
+	 * comportements d'instance
+	 */
+	
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(this.getAge(), etat, sexe);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Animal other = (Animal) obj;
+		return age == other.age && etat == other.etat && sexe == other.sexe;
+	}
+
+	public void seDeplacer() {
+
+		//TODO utiliser Math.random() pour choisir une direction de déplacement
+		int dx = (int) (3 * Math.random()) - 1;
+		int dy = (int) (3 * Math.random()) - 1;
+		this.coord = new Point(this.coord.x + dx, this.coord.y + dy);
+		
+	}
+	
+	
+	
+
+	
+
+
+
+
+}

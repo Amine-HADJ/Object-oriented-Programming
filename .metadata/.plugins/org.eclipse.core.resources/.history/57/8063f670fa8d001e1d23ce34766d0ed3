@@ -1,0 +1,41 @@
+package tp.model.agents;
+
+import java.awt.Point;
+
+public abstract class Vegetal extends Agent {
+
+
+		public Vegetal(Point coord) {
+			super(coord);
+		}
+		
+		
+		
+		public Vegetal() {
+			super();
+			
+		}
+		
+		public void rencontrer() {
+			
+		}
+		
+		protected void maj() {
+			
+		}
+		
+		
+		
+
+
+
+		
+
+
+
+		
+
+
+
+	}
+

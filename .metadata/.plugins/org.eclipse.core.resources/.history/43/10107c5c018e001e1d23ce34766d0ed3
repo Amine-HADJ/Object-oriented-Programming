@@ -1,0 +1,44 @@
+package tp.model.agents;
+
+import java.awt.Point;
+
+
+public class Decor{
+
+	
+	
+	private Point coord;
+	
+
+	public Decor(Point coord) {
+		super(coord);
+	}
+
+	
+
+	public int getId() {
+		return this.id;
+	}
+
+	
+
+	
+
+	public Point getCoord() {
+		return new Point(this.coord);
+	}
+
+	
+
+	
+	
+	protected static int getUniqueId() {
+		//TODO 
+		
+		return ++currentId;
+	}
+	
+
+	
+
+}

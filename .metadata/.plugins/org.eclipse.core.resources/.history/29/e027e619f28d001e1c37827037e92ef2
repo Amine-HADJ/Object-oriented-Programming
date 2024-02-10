@@ -1,0 +1,41 @@
+package tp.model.agents;
+
+import java.awt.Point;
+
+public abstract class Vegetal extends Agent {
+
+
+		public Vegetal(Point coord) {
+			super();
+			age = 0;
+			this.sexe=Sexe.Assexue;
+			this.coord=new Point(coord);
+		}
+		
+		
+		
+		public Vegetal() {
+			super();
+			
+			age = 0;
+			this.sexe=Sexe.Assexue;
+			this.coord=new Point(0,0);
+			
+		}
+		
+		
+		
+		
+
+
+
+		
+
+
+
+		
+
+
+
+	}
+

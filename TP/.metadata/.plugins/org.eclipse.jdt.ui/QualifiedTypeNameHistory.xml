@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="tp.model.agents.Vegetal"/>
+    <fullyQualifiedTypeName name="model.agents.vegetaux.Vegetal"/>
+    <fullyQualifiedTypeName name="java.awt.Point"/>
+    <fullyQualifiedTypeName name="model.agents.animaux.AbeilleSolitaire"/>
+    <fullyQualifiedTypeName name="model.agents.Sexe"/>
+    <fullyQualifiedTypeName name="model.agents.animaux.FrelonAsiatique"/>
+    <fullyQualifiedTypeName name="model.agents.Animal"/>
+    <fullyQualifiedTypeName name="model.agents.animaux.Abeille"/>
+    <fullyQualifiedTypeName name="model.agents.Etat"/>
+    <fullyQualifiedTypeName name="model.decor.Decor"/>
+    <fullyQualifiedTypeName name="model.decor.Champ"/>
+    <fullyQualifiedTypeName name="model.decor.Ruche"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,63 @@
+package launchers;
+
+import java.awt.Point;
+
+
+import tp.model.agents.*;
+	
+
+
+public class LauncherTP2 {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		//TODO
+		//tester la hiérarchie d'agent
+		
+		AbeilleSolitaire a = new AbeilleSolitaire(Sexe.Femelle,new Point(25,30));
+		Arbre arb = new Arbre();
+		FrelonAsiatique f = new FrelonAsiatique();
+		FrelonEuropeen fe = new FrelonEuropeen();
+		
+		Ruche ruche = new Ruche(new Point(25,50));
+		
+//		System.out.println(ruche.peutAccueillir(a));
+//		ruche.accueillir(a);
+//		System.out.println(a.lieuHebergement);
+		
+		System.out.println(arb.getAge());
+		System.out.println(arb.getCoord());
+		arb.cycle();
+		System.out.println(arb.getAge());
+		System.out.println(arb.getCoord());
+		
+		System.out.println(a.getAge());
+		System.out.println(a.getCoord());
+		a.cycle();
+		System.out.println(a.getAge());
+		System.out.println(a.getCoord());
+		
+		
+		System.out.println(a.getNiveauSante());
+		f.rencontrer(a);
+		System.out.println(a.getNiveauSante());
+		
+		System.out.println(f.getNiveauSante());
+		f.ameliorerEtat();
+		f.ameliorerEtat();
+		System.out.println(f.getNiveauSante());
+		
+		
+		
+		
+	
+		
+	}
+
+}

@@ -1,0 +1,45 @@
+package tp.model.agents;
+
+import java.awt.Point;
+import java.util.HashSet;
+import tp.model.comportements.Hebergeur;
+
+public class Ruche extends Decor implements Hebergeur {
+	
+	private HashSet<Abeille> population = new HashSet<Abeille>();
+	private int populationMax;
+	
+	
+	
+
+	public Ruche(Point coord) {
+		// TODO Auto-generated constructor stub
+		super(coord);
+	}
+	
+
+	@Override
+	public boolean peutAccueillir(Animal a) {
+		// TODO Auto-generated method stub
+		String supclassName = a.getClass().getSuperclass().getSimpleName().toString();
+		
+		if (supclassName.equals("Abeille")) {
+			return true;
+		}
+			
+		return false;
+		}
+
+	@Override
+	public boolean accueillir(Animal a) {
+		// TODO Auto-generated method stub
+		if (this.peutAccueillir(a)) {
+			a.lieuHebergement = this;
+			return true;
+		}
+		return false;
+	}
+	
+	
+
+}

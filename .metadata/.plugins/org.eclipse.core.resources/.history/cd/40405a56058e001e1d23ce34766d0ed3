@@ -1,0 +1,43 @@
+package tp.model.agents;
+
+import java.awt.Point;
+
+public class PointPositif{
+	
+	private Point p = new Point();
+	
+	
+	public PointPositif(Point p) {
+		this.p.x = (int) Math.abs(p.x);
+		this.p.y = (int) Math.abs(p.y);
+		
+		
+	}
+	
+	public int getX() {
+		return this.p.x;
+		
+	}
+	
+	public int getY() {
+		return this.p.y;
+		
+	}
+	
+	public boolean setX(int X) {
+
+		this.p.x = Math.abs(X);
+		return true;
+
+	}
+		
+	public boolean setY(int Y) {
+			
+			this.p.y = Math.abs(Y);
+			return true;
+
+	}
+		
+		
+
+}

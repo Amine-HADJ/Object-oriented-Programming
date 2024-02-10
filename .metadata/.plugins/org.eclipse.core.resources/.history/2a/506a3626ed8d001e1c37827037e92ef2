@@ -1,0 +1,30 @@
+package tp.model.agents;
+
+import java.awt.Point;
+
+public class FrelonAsiatique extends Frelon {
+
+	public FrelonAsiatique(Sexe sexe, Point coord) {
+		super(sexe, coord);
+		// TODO Auto-generated constructor stub
+	}
+
+	public FrelonAsiatique(Sexe sexe) {
+		super(sexe);
+		// TODO Auto-generated constructor stub
+	}
+
+	public FrelonAsiatique() {
+		// TODO Auto-generated constructor stub
+		
+	}
+	
+	public void rencontrer (Animal a) {
+		super.rencontrer(a);
+		String className = a.getClass().getSimpleName().toString();
+		if (className.equals("FrelonEuropeen") ) {
+			a.etat = Etat.EnDetresse;
+		}
+		
+	}
+}

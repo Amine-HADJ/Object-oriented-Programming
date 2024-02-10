@@ -1,0 +1,41 @@
+package tp.model.agents;
+
+import java.awt.Point;
+
+public class PointPositif extends Point {
+	private Point p;
+	
+	
+	public PointPositif(Point p) {
+		
+	}
+	
+	public int getX() {
+		return (int) (this.p.x);
+		
+	}
+	
+	public int getY() {
+		return p.y;
+		
+	}
+	
+	public boolean setX(int X) {
+		if(X > 0) {
+			this.p.x = X;
+			return true;
+		}
+		return false;
+	}
+		
+		public boolean setY(int Y) {
+			if(Y > 0) {
+				this.p.y = Y;
+				return true;
+			}
+			return false;
+		
+		
+	}
+
+}

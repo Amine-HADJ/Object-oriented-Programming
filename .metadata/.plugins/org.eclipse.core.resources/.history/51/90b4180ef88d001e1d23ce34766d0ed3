@@ -1,0 +1,41 @@
+package tp.model.agents;
+
+import java.awt.Point;
+
+public abstract class Frelon extends Animal {
+
+	public Frelon(Sexe sexe, Point coord) {
+		super(sexe, coord);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Frelon(Sexe sexe) {
+		super(sexe);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Frelon() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	protected void seNourrir() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void rencontrer(Agent a) {
+	
+		// TODO Auto-generated method stub
+		if (a instanceof Abeille ) {
+			a.setNiveauSante(Etat.EnDetresse);
+		}
+		
+	}
+	
+	protected void maj() {
+		
+	}
+
+}
